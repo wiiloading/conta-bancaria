@@ -1,0 +1,71 @@
+//Classe Pai
+class ContaBancaria{
+    private String cliente;
+    private int numConta;
+    private float saldo;
+   
+    public float sacar(float valor) {
+        float saldoAtual = this.saldo;
+        saldoAtual = saldoAtual -= valor
+        if (saldoAtual < 0){
+            return this.saldo;
+        }
+        this.saldo = this.saldo - valor;
+        return this.saldo;
+    }
+   
+    public void depositar(float valor){
+        this.saldo = this.saldo + valor;
+    }
+   
+    /*Getter and Setters*/
+    public String setCliente(String cliente){
+        this client = cliente;
+    }
+    public void getClient(){
+        return this.cliente;
+    }
+    public void setSaldo(float saldo){
+        this.saldo = saldo;
+    }
+    public f loat getSaldo(){
+        return saldo;
+    }
+    public void setNumConta(int nunConta){
+        this.numConta = nunConta;
+    }
+    public int getNumConta(){
+        return nunConta;
+    }
+   
+}
+
+//Class Filha (SUPERCLASSE)
+class ContaPoupanca extends ContaBancaria{
+     private int diaDeRedndimento;
+     public void calcularNovo Saldo(int taxaRedimento){
+         this.setSaldo(taxaDeRendimento * this.setSaldo());
+     }
+}
+
+class ContaEspecial extends ContaBancaria{
+   private float limite;
+   
+   @Override
+   public float sacar(floar valor) {
+       float saldoAtual = this.saldo;
+       saldoAtual -= valor;
+       if(saldoAtual < -this.getlimite(){
+           return this.getSaldo
+       }
+       this.saldo(this.getSaldo() - valor)
+       return this.getSaldo();
+   }
+   public float  getlimite(){
+       return this.limite;
+   }
+   public void setlimite (float limite){
+       this.limite = limite;
+       this.setSaldo(this.limite + this.getSaldo());
+   }
+}
